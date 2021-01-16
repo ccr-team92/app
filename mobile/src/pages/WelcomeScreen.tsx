@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
 export default function WelcomeScreen() {
@@ -14,7 +13,6 @@ export default function WelcomeScreen() {
     return (
         <ImageBackground source={require('../assets/welcome.png')} style={styles.imgBackground}>
             <View style={styles.container}>
-                <LinearGradient colors={['rgba(248,189,9,0.3)', 'rgba(255,132,65,0.3)', 'rgba(254,18,67,0.3)']} style={styles.background}></LinearGradient>
                 <View style={styles.rect}>
                     <Image style={styles.image} source={{ uri: 'https://fmnova.com.br/images/noticias/safe_image.jpg' }} />
                     <Text style={styles.title}>Bem-vindo, estudante!</Text>
@@ -40,11 +38,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         width: Dimensions.get('window').width,
         backgroundColor: 'black',
-    },
-    background: {
-        position: 'absolute',
-        height: Dimensions.get('window').height,
-        width: Dimensions.get('window').width,
     },
     rect: {
         backgroundColor: 'rgba(255, 255, 255, 0.60)',

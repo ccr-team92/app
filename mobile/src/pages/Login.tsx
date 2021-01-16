@@ -39,12 +39,6 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height
     },
-    background: {
-        position: 'absolute',
-        height: Dimensions.get('window').height,
-        width: Dimensions.get('window').width * 2.16,
-        right: 0,
-    },
     rect: {
         backgroundColor: 'rgba(255, 255, 255, 0.60)',
         width: 374,
