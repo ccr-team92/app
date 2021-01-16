@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     },
     backgroundCard: {
         position: 'absolute',
-        height: Dimensions.get('window').height,
+        height: '100%',
         width: '100%',
         borderRadius: 31,
         borderBottomLeftRadius: 0,
