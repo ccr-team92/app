@@ -1,13 +1,10 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground, TextInput } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Login() {
     return (
-        <ImageBackground source={image} style={styles.imgBackground}>
+        <ImageBackground source={require('../assets/login.png')} style={styles.imgBackground}>
             <View style={styles.container}>
-                <LinearGradient colors={['rgba(248,189,9,0.3)', 'rgba(255,132,65,0.3)', 'rgba(254,18,67,0.3)']} style={styles.background}></LinearGradient>
-                <Image style={require('../assets/login.png')} source={{ uri: 'https://fmnova.com.br/images/noticias/safe_image.jpg' }} />
                 <View style={styles.rect}>
                     <Text style={styles.title}>FAÇA SEU LOGIN</Text>
                     <TextInput style={styles.textInput} />
@@ -31,7 +28,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(254,18,67,0.3)',
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height
 
@@ -46,7 +42,8 @@ const styles = StyleSheet.create({
     background: {
         position: 'absolute',
         height: Dimensions.get('window').height,
-        width: Dimensions.get('window').width
+        width: Dimensions.get('window').width * 2.16,
+        right: 0,
     },
     rect: {
         backgroundColor: 'rgba(255, 255, 255, 0.60)',
