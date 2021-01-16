@@ -1,16 +1,44 @@
-import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground, TextInput } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Text, TouchableOpacity, Dimensions, ImageBackground, TextInput } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
+import api from '../services/api';
 
 export default function Login() {
+
+    const [user, setUser] = useState('anibalsolon');
+    const [password, setPassword] = useState('123412341');
+    const [signingIn, setSigningIn] = useState(false);
+    const [failure, setFailure] = useState(false);
+
+    const navigation = useNavigation();
+
+    async function login() {
+        if (signingIn) {
+            return;
+        }
+        setSigningIn(true);
+        try {
+            const response = await api.post(
+                '/users/login',
+                { user, password }
+            );
+            localStorage.setItem('token', response.data.token);
+            navigation.navigate("Home");
+        } catch (error) {
+            setFailure(true);
+        }
+        setSigningIn(false);
+    }
+
     return (
         <ImageBackground source={require('../assets/login.png')} style={styles.imgBackground}>
             <View style={styles.container}>
                 <View style={styles.rect}>
                     <Text style={styles.title}>FAÇA SEU LOGIN</Text>
-                    <TextInput style={styles.textInput} />
-                    <TextInput style={styles.textInput} />
+                    <TextInput style={styles.textInput} value={user} onChangeText={setUser} />
+                    <TextInput style={styles.textInput} secureTextEntry={true} value={password} onChangeText={setPassword} />
                     <Text style={styles.textForgot}>Esqueci a minha senha</Text>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={[styles.button, signingIn && styles.buttonDisabled]} onPress={login}>
                         <Text style={styles.buttonText}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
@@ -64,7 +92,7 @@ const styles = StyleSheet.create({
         textWeight: 'bold',
         fontFamily: 'Dosis_700Bold',
         marginTop: 40,
-        marginBottom: 10
+        marginBottom: 10,
     },
     textForgot: {
         color: '#FFF',
@@ -77,6 +105,7 @@ const styles = StyleSheet.create({
         height: 72,
         backgroundColor: 'rgba(255, 255, 255, 0.65)',
         borderRadius: 36,
+        padding: 20,
         marginBottom: 14
     },
     button: {
@@ -87,6 +116,9 @@ const styles = StyleSheet.create({
         height: 72,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    buttonDisabled: {
+        backgroundColor: '#DDD',
     },
     buttonSubscribe: {
         backgroundColor: 'rgba(255, 255, 255, 0.65)',
