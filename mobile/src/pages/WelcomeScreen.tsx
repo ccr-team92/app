@@ -25,7 +25,7 @@ export default function WelcomeScreen() {
     return (
       <ImageBackground source={image} style={styles.imgBackground}>
         <View style={styles.container}>
-        <LinearGradient colors={['RGBA(248,189,9,0.3)', 'RGBA(255,132,65,0.3', 'RGBA(254,18,67,0.3)']} style={styles.background}></LinearGradient>
+        <LinearGradient colors={['rgba(248,189,9,0.3)', 'rgba(255,132,65,0.3', 'rgba(254,18,67,0.3)']} style={styles.background}></LinearGradient>
             <View style={styles.rect}>
               <Image style={styles.image} source={{ uri: 'https://fmnova.com.br/images/noticias/safe_image.jpg' }} />
               <Text style={styles.title}>Bem-vindo, estudante!</Text>
