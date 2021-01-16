@@ -5,12 +5,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const { Navigator, Screen } = createStackNavigator();
 
-import OrphanagesMap from '../pages/OrphanagesMap';
-import SelectMapPosition from '../pages/CreateOrphanage/SelectMapPosition';
-import OrphanageData from '../pages/CreateOrphanage/OrphanageData';
-import VisitationData from '../pages/CreateOrphanage/VisitationData';
-import OrphanageDetails from '../pages/OrphanageDetails';
+import Login from '../pages/Login';
+import Home from '../pages/HomeScreen';
 import Header from '../components/Header';
+import WelcomeScreen from '../pages/WelcomeScreen';
 
 export default function Routes() {
   return (
@@ -21,36 +19,20 @@ export default function Routes() {
           cardStyle: { backgroundColor: '#F2F3F5' }
         }}>
         <Screen 
-          name="OrphanagesMap" 
-          component={OrphanagesMap} 
+          name="Welcome Screen" 
+          component={WelcomeScreen} 
         />
 
         <Screen 
-          name="SelectMapPosition" 
-          component={SelectMapPosition}
-          options={{ 
-            headerShown: true,
-            header: (props) => <Header title="Selecione no mapa" {...props} />,
-          }}
+          name="Login" 
+          component={Login}
         />
-        
+
         <Screen 
-          name="OrphanageData" 
-          component={OrphanageData}
-          options={{ 
-            headerShown: true,
-            header: (props) => <Header title="Dados do orfanato" {...props} />,
-          }}
+          name="Home" 
+          component={Home}
         />
-        
-        <Screen 
-          name="OrphanageDetails"
-          component={OrphanageDetails}
-          options={{ 
-            headerShown: true,
-            header: (props) => <Header title="Orfanato" showCancel={false} {...props} />,
-          }}
-        />
+
       </Navigator>
     </NavigationContainer>
   );
