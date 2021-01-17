@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
+import { ScrollView, View, StyleSheet, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign } from '@expo/vector-icons'; 
 
@@ -11,7 +11,7 @@ export default function MyBadges() {
             <View style={styles.rect}>
                 <LinearGradient start={{x: 0.1, y: 0.9}} end={{x: 0.9, y: 0}} colors={['rgba(255,255,255,0.6)', 'rgba(255,255,255,0.0)']} style={styles.backgroundCard}></LinearGradient>
                 <View style={styles.containerImage}>
-                    <Image style={styles.imageProfile} source={require('./assets/avatar.png')} />
+                    <Image style={styles.imageProfile} source={require('../assets/avatar.png')} />
                 </View>
                 <View style={styles.containerProfile}>
                     <Text style={styles.title}></Text>
@@ -21,14 +21,14 @@ export default function MyBadges() {
                 </View>
                 <View style={styles.containerScore}>
                     <View style={[styles.bubble, styles.leftBubble]}>
-                        <Image style={[styles.bubbleImage, { width: 34, height: 28 }]} source={require('./assets/points.png')} />
+                        <Image style={[styles.bubbleImage, { width: 34, height: 28 }]} source={require('../assets/points.png')} />
                         <View style={styles.bubbleText}>
                             <Text style={styles.text}>Conquistas</Text>
                             <Text style={styles.textGray}>8/32</Text>
                         </View>
                     </View>
                     <View style={[styles.bubble, styles.rightBubble]}>
-                        <Image style={[styles.bubbleImage, { width: 40, height: 20 }]} source={require('./assets/ranking.png')} />
+                        <Image style={[styles.bubbleImage, { width: 40, height: 20 }]} source={require('../assets/ranking.png')} />
                         <View style={styles.bubbleText}>
                             <Text style={styles.text}>Pontos</Text>
                             <Text style={styles.textGray}>1809 pt</Text>
@@ -36,75 +36,75 @@ export default function MyBadges() {
                     </View>
                 </View>
                 <Text style={styles.titleBold}>SUAS CONQUISTAS</Text>
-                <Image source={require('./assets/medals.png')} style={{width: 131, height:30, marginTop: 5}}/> 
+                <Image source={require('../assets/medals.png')} style={{width: 131, height:30, marginTop: 5}}/> 
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/forca.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/forca.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>Força, foco e fé</Text>
                     <Text style={styles.subTitleContent}>NO CURSO DEFINA SEUS OBJETIVOS</Text>
                   </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/agoravai.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/agoravai.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>#agoravai</Text>
                     <Text style={styles.subTitleContent}>NO CURSO DEFINA SEUS OBJETIVOS</Text>
                   </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/resiliencia.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/resiliencia.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>Resiliência é uma dádiva!</Text>
                     <Text style={styles.subTitleContent}>NO CURSO DESENVOLVA SUAS SOFT SKILLS</Text>
                   </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/flexivel.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/flexivel.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>Mais flexível que grafeno!</Text>
                     <Text style={styles.subTitleContent}>NO CURSO DESENVOLVA SUAS SOFT SKILLS</Text>
                   </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/ted.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/ted.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>Quase um TedTalker!</Text>
                     <Text style={styles.subTitleContent}>NO CURSO PREPARE-SE PARA FALAR EM PÚBLICO</Text>
                   </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/felipe.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/felipe.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>Felipe Neto que se cuide!</Text>
                     <Text style={styles.subTitleContent}>NO CURSO PREPARE-SE PARA FALAR EM PÚBLICO</Text>
                   </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/julius.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/julius.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>Julius ficaria orgulhoso!</Text>
                     <Text style={styles.subTitleContent}>NO CURSO PLANEJE SUAS FINANÇAS</Text>
                   </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Image source={require('./assets/nath.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/nath.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleContent}>Discípulo da Nath Finanças</Text>
                     <Text style={styles.subTitleContent}>NO CURSO PLANEJE SUAS FINANÇAS</Text>
                   </View>
                 </View>
-                <Image source={require('./assets/points2.png')} style={{width: 149, height:30, marginTop: 5, marginBottom: 10}}/> 
+                <Image source={require('../assets/points2.png')} style={{width: 149, height:30, marginTop: 5, marginBottom: 10}}/> 
                 <Text style={styles.subTitleRanking}>1856 PONTOS   |    1º LUGAR NO RANKING GERAL </Text>
                 <Text style={styles.subTitleRanking}>Confira o desempenho dos jogadores </Text>
                 <View style={styles.headerRanking}>
-                  <Image source={require('./assets/avatar.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/avatar.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleRanking}>JULIANA ALMEIDA</Text>
                     <Text style={styles.subTitleRanking}>1º lugar | 1856 pontos</Text>
                   </View>
                 </View>
                 <View style={styles.headerRanking}>
-                  <Image source={require('./assets/avatar2.png')} style={{width: 74, height:74}}/> 
+                  <Image source={require('../assets/avatar2.png')} style={{width: 74, height:74}}/> 
                   <View>
                     <Text style={styles.titleRanking}>PEDRO SOUZA</Text>
                     <Text style={styles.subTitleRanking}>2º lugar | 1844 pontos</Text>

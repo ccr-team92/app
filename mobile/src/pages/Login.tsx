@@ -12,8 +12,8 @@ export default function Login() {
 
     const navigation = useNavigation();
 
-    function handleSignup() {
-        navigation.navigate("Signup");
+    function handleNavigation(route: string) {
+        navigation.navigate(route);
     }
 
     async function login() {
@@ -42,12 +42,12 @@ export default function Login() {
                     <TextInput style={styles.textInput} value={user} onChangeText={setUser} />
                     <TextInput style={styles.textInput} secureTextEntry={true} value={password} onChangeText={setPassword} />
                     <Text style={styles.textForgot}>Esqueci a minha senha</Text>
-                    <TouchableOpacity style={[styles.button, signingIn && styles.buttonDisabled]} onPress={login}>
+                    <TouchableOpacity style={[styles.button, signingIn && styles.buttonDisabled]} onPress={() => handleNavigation('Profile')}>
                         <Text style={styles.buttonText}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
                 <Text style={styles.text}>É a sua primeira vez aqui?</Text>
-                <TouchableOpacity style={styles.buttonSubscribe} onPress={handleSignup}>
+                <TouchableOpacity style={styles.buttonSubscribe}  onPress={() => handleNavigation('Signup')}>
                     <Text style={styles.buttonText}>CADASTRE-SE</Text>
                 </TouchableOpacity>
             </View>
@@ -110,7 +110,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255, 255, 255, 0.65)',
         borderRadius: 36,
         padding: 20,
-        marginBottom: 14
+        marginBottom: 14,
+        fontFamily: 'Dosis_400Regular',
+        fontSize: 24,
+        color: "#CD4F0C"
     },
     button: {
         backgroundColor: '#FE1243',

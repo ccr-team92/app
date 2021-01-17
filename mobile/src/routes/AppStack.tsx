@@ -12,6 +12,9 @@ import CoursePage from '../pages/CoursePage';
 import Home from '../pages/HomeScreen';
 import Welcome from '../pages/Welcome';
 import CourseList from '../pages/CourseList';
+import CourseBadges from '../pages/CourseBadges';
+import MyBadges from '../pages/MyBadges';
+import Profile from '../pages/Profile';
 
 const tabBar = () => (
     <ImageBackground source={require('../assets/menuGradient.png')} style={styles.footer}>
@@ -76,6 +79,21 @@ export default function Routes() {
                 <Screen
                     name="CoursePage"
                     component={CoursePage}
+                />
+
+                <Screen
+                    name="CourseBadges"
+                    component={CourseBadges}
+                />
+
+                <Screen
+                    name="MyBadges"
+                    component={MyBadges}
+                />
+
+                <Screen
+                    name="Profile"
+                    component={Profile}
                 />
             </Navigator>
         </NavigationContainer>

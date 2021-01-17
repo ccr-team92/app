@@ -6,8 +6,8 @@ export default function Welcome() {
 
     const navigation = useNavigation();
 
-    function handleNavigateToLogin() {
-        navigation.navigate("Login");
+    function handleNavigation(route: string) {
+        navigation.navigate(route);
     }
 
     return (
@@ -16,7 +16,7 @@ export default function Welcome() {
                 <View style={styles.rect}>
                     <Image style={styles.image} source={{ uri: 'https://fmnova.com.br/images/noticias/safe_image.jpg' }} />
                     <Text style={styles.title}>Bem-vindo, estudante!</Text>
-                    <TouchableOpacity style={styles.button} onPress={handleNavigateToLogin}>
+                    <TouchableOpacity style={styles.button} onPress={() => handleNavigation('Login')}>
                         <Text style={styles.buttonText}>COMECE SUA JORNADA</Text>
                     </TouchableOpacity> 
                 </View>

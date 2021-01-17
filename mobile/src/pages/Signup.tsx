@@ -19,6 +19,11 @@ export default function Signup() {
     const [failure, setFailure] = useState(false);
 
     const navigation = useNavigation();
+    
+    //FOR DEMO
+    function handleNavigation(route: string) {
+      navigation.navigate(route);
+    }//ENDFORDEMO
 
     function handleForm(field: string) {
         return function (value: string) {
@@ -60,7 +65,7 @@ export default function Signup() {
               <Text style={styles.titleFill}>DADOS PESSOAIS</Text>
               <TextInput style={styles.textInput} placeholder={"DATA DE NASCIMENTO"} value={form.date_of_birth} onChangeText={handleForm('date_of_birth')} />
               <TextInput style={styles.textInput} placeholder={"CIDADE"} value={form.city} onChangeText={handleForm('city')} />
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity onPress={() => handleNavigation('Login')} style={styles.button}>
                 <Text style={styles.buttonText}>CADASTRAR</Text>
               </TouchableOpacity>
             </View>

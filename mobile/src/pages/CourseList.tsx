@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
+import { useNavigation } from "@react-navigation/native";
 
 const padlock = (color: string) => (
     <Svg width="18" height="26">
@@ -21,6 +22,11 @@ const star = (color: string) => (
 );
 
 export default function CourseList() {
+    const navigation = useNavigation();
+
+    function handleNavigation(route: string) {
+        navigation.navigate(route);
+    }
 
     const [path, setPath] = useState('A');
 
@@ -34,13 +40,13 @@ export default function CourseList() {
                         <View style={styles.titleBox}>
                             <Text style={styles.title}>CURSOS</Text>
                         </View>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => handleNavigation('CoursePage')}>
                             <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Descubra seus objetivos</Text>
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
+                            <ImageBackground source={require('../assets/softskills.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Desenvolva suas soft skills</Text>
                             </ImageBackground>
                         </TouchableOpacity>
@@ -54,18 +60,27 @@ export default function CourseList() {
                             <Text style={styles.title}>CURSOS</Text>
                         </View>
                         <TouchableOpacity>
-                            <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
+                            <ImageBackground source={require('../assets/empreenda.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Empreenda</Text>
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
+                            <ImageBackground source={require('../assets/amadureca.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Amadureça sua inteligência emocional</Text>
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
+                            <ImageBackground source={require('../assets/planeje.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Planeje suas finanças</Text>
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                            </ImageBackground>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <ImageBackground source={require('../assets/programar.png')} style={styles.bgCurso}>
+                                <Text style={styles.titleCourse}>Aprenda a programar</Text>
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                     </>
@@ -78,19 +93,19 @@ export default function CourseList() {
                             <Text style={styles.title}>CURSOS</Text>
                         </View>
                         <TouchableOpacity>
-                            <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
+                            <ImageBackground source={require('../assets/envolvase.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Envolva-se</Text>
                                 <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
+                            <ImageBackground source={require('../assets/exerca.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Exerça sua cidadania</Text>
                                 <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
+                            <ImageBackground source={require('../assets/diversifique.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Diversifique e inclua</Text>
                                 <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
@@ -259,8 +274,8 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     bgCurso: {
-        width: 345,
-        height: 100,
+        width: 342,
+        height: 97,
         marginTop: 10,
         padding: 20,
         justifyContent: 'center',

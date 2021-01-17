@@ -2,8 +2,14 @@ import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
 
 export default function Profile() {
+    const navigation = useNavigation();
+
+    function handleNavigation(route: string) {
+        navigation.navigate(route);
+    }
     return (
         <View style={styles.container}>
             <LinearGradient start={{x: 0, y: 0}} end={{x: 0, y: 1}} colors={['rgba(248,189,9,1)', 'rgba(255,132,64,1)', 'rgba(254,18,67,1)']} style={styles.background}></LinearGradient>
@@ -40,7 +46,7 @@ export default function Profile() {
                         <Text style={styles.titleBold}>Amadureça sua inteligência emocional</Text>
                     </ImageBackground>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonSeeAll}>
+                <TouchableOpacity onPress={() => handleNavigation('CourseList')} style={styles.buttonSeeAll}>
                     <Text style={styles.buttonText}>VER TODOS</Text>
                 </TouchableOpacity>
                 <View style={styles.menuProfile}>

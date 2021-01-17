@@ -1,36 +1,42 @@
 import React from 'react';
 import {ScrollView, View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
-export default function Login() {
+export default function CourseBadges() {
+  const navigation = useNavigation();
+
+  function handleNavigation(route: string) {
+    navigation.navigate(route);
+  }
     return (
       <ScrollView style={styles.container}>
-        <ImageBackground source={require('./assets/bgCurso.png')} style={styles.header}>
+        <ImageBackground source={require('../assets/bgCurso.png')} style={styles.header}>
           <Text style={styles.titleCourse}>Descubra seus objetivos</Text>
         </ImageBackground>
         <View style={styles.containerFix}>
           <View style={styles.containerMain}>
-            <Image source={require('./assets/progressBar100.png')} style={{width: 309, height:10, marginTop: 10}}/>
+            <Image source={require('../assets/progressBar100.png')} style={{width: 309, height:10, marginTop: 10}}/>
             <View style={styles.medalsContainer}>
-              <Image source={require('./assets/trophyColor.png')} style={{width: 27, height:22, marginRight:5,}}/> 
+              <Image source={require('../assets/trophyColor.png')} style={{width: 27, height:22, marginRight:5,}}/> 
               <Text style={styles.medals}>2 CONQUISTAS</Text>
             </View>
-            <Image source={require('./assets/line.png')} style={{width:309, height:1, marginTop: 10, marginBottom:10}}/>
+            <Image source={require('../assets/line.png')} style={{width:309, height:1, marginTop: 10, marginBottom:10}}/>
             
             <View style={styles.headerContent}>
-              <Image source={require('./assets/forca2.png')} style={{width: 74, height:74}}/> 
+              <Image source={require('../assets/forca3.png')} style={{width: 74, height:74}}/> 
               <Text style={styles.titleContent}>Força, foco e fé</Text>
             </View>
             <View style={styles.headerContent}>
-              <Image source={require('./assets/agora2.png')} style={{width: 74, height:74}}/> 
+              <Image source={require('../assets/agoravai2.png')} style={{width: 74, height:74}}/> 
               <Text style={styles.titleContent}>#agoravai</Text>
             </View>
 
-            <ImageBackground source={require('./assets/rectHeaderPoints.png')} style={styles.headerPoints}>
-              <Image source={require('./assets/ranking2.png')} style={{width: 65, height:65, marginTop: -30, marginBottom: 20}}/> 
+            <ImageBackground source={require('../assets/rectHeaderPoints.png')} style={styles.headerPoints}>
+              <Image source={require('../assets/ranking2.png')} style={{width: 65, height:65, marginTop: -30, marginBottom: 20}}/> 
               <Text style={styles.medals}>Você fez 2080 pontos!</Text>
             </ImageBackground>
 
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity onPress={() => handleNavigation('MyBadges')} style={styles.button}>
               <Text style={styles.buttonText}>VER TODAS AS CONQUISTAS</Text>
             </TouchableOpacity>
           </View>
