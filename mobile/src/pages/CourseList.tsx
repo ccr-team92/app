@@ -22,7 +22,7 @@ const star = (color: string) => (
 
 export default function CourseList() {
 
-    const [path, setPath] = useState('B');
+    const [path, setPath] = useState('A');
 
     function pathCourses(path: string) {
         switch (path) {
@@ -30,6 +30,10 @@ export default function CourseList() {
             case 'A':
                 return (
                     <>
+                        <Text style={styles.textDescription}>Comece aqui sua jornada. Finalize as duas trilhas para desbloquear novos cursos</Text>
+                        <View style={styles.titleBox}>
+                            <Text style={styles.title}>CURSOS</Text>
+                        </View>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Descubra seus objetivos</Text>
@@ -45,6 +49,10 @@ export default function CourseList() {
             case 'B':
                 return (
                     <>
+                        <Text style={styles.textDescription}>Escolha seus quatro cursos favoritos</Text>
+                        <View style={styles.titleBox}>
+                            <Text style={styles.title}>CURSOS</Text>
+                        </View>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Empreenda</Text>
@@ -65,6 +73,10 @@ export default function CourseList() {
             case 'C':
                 return (
                     <>
+                        <Text style={styles.textDescription}>Use seus pontos para desbloquear os cursos extras</Text>
+                        <View style={styles.titleBox}>
+                            <Text style={styles.title}>CURSOS</Text>
+                        </View>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/bgCurso.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Envolva-se</Text>
@@ -108,10 +120,7 @@ export default function CourseList() {
                         { star(path === 'C' ? '#FFE8DD' : '#FE8342') }
                     </TouchableOpacity>
                 </View>
-                <Text style={styles.textDescription}>Comece aqui sua jornada. Finalize as duas trilhas para desbloquear novos cursos</Text>
-                <View style={styles.titleBox}>
-                    <Text style={styles.title}>CURSOS</Text>
-                </View>
+                
 
                 {pathCourses(path)}
 
