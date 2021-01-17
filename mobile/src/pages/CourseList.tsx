@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const logo = require("../assets/logo.svg");
 
-const padlock = (color: string) => (
+const Padlock = (color: string) => (
     <Svg width="18" height="26">
         <Path d="M14.7955 11.423V6.74998C14.7955 3.31662 11.9994 0.520508 8.566 0.520508C5.13265 0.520508 2.33653 3.31662 2.33653 6.74998V11.423C1.04661 11.423 0 12.4697 0 13.7596V23.1057C0 24.3918 1.04661 25.4422 2.33653 25.4422H14.7955C16.0854 25.4422 17.132 24.3956 17.132 23.1057V13.7596C17.1281 12.4697 16.0815 11.423 14.7955 11.423ZM3.89294 6.74998C3.89294 4.174 5.99002 2.07691 8.566 2.07691C11.142 2.07691 13.2391 4.174 13.2391 6.74998V11.423H3.89294V6.74998ZM15.5717 23.1018C15.5717 23.5305 15.2203 23.882 14.7916 23.882H2.33267C1.90399 23.882 1.55254 23.5344 1.55254 23.1018V13.7557C1.55254 13.327 1.90399 12.9756 2.33267 12.9756H14.7916C15.2203 12.9756 15.5717 13.3232 15.5717 13.7557V23.1018Z" stroke={color} fill="none" strokeWidth="1.0" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
     </Svg>
@@ -64,25 +64,25 @@ export default function CourseList() {
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/empreenda.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Empreenda</Text>
-                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/amadureca.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Amadureça sua inteligência emocional</Text>
-                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/planeje.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Planeje suas finanças</Text>
-                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/programar.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Aprenda a programar</Text>
-                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                     </>
@@ -97,19 +97,19 @@ export default function CourseList() {
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/envolvase.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Envolva-se</Text>
-                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/exerca.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Exerça sua cidadania</Text>
-                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/diversifique.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Diversifique e inclua</Text>
-                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                     </>
@@ -126,7 +126,7 @@ export default function CourseList() {
                 <View style={styles.courseCategory}>
                     <TouchableOpacity style={[styles.squareA, path === 'A' && styles.squareSelected]} onPress={() => setPath('A')}>
                         <Text style={path === 'A' ? styles.text : styles.textGray}>PREPARE-SE PARA A VIDA</Text>
-                        { padlock(path === 'A' ? '#FFE8DD' : '#FE8342') }
+                        { Padlock(path === 'A' ? '#FFE8DD' : '#FE8342') }
                     </TouchableOpacity>
                     <TouchableOpacity style={[styles.squareB, path === 'B' && styles.squareSelected]} onPress={() => setPath('B')}>
                         <Text style={path === 'B' ? styles.text : styles.textGray}>ESTUDE O QUE AMA</Text>

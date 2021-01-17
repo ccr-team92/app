@@ -48,7 +48,7 @@ export default function Login() {
                     </TouchableOpacity>
                 </View>
                 <Text style={styles.text}>É a sua primeira vez aqui?</Text>
-                <TouchableOpacity style={styles.buttonSubscribe}  onPress={() => handleNavigation('Signup')}>
+                <TouchableOpacity style={styles.buttonSubscribe}  onPress={login}>
                     <Text style={styles.buttonText}>CADASTRE-SE</Text>
                 </TouchableOpacity>
             </View>
