@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Dosis_700Bold, Dosis_800ExtraBold, Dosis_400Regular } from '@expo-google-fonts/dosis';
 
-export default function Login() {
+export default function CourseListA() {
   let [fontsLoaded] = useFonts({
     Dosis_700Bold,
     Dosis_800ExtraBold,

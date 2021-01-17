@@ -6,8 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 const { Navigator, Screen } = createStackNavigator();
 
 import Login from '../pages/Login';
+import Signup from '../pages/Signup';
 import Home from '../pages/HomeScreen';
-import Header from '../components/Header';
 import WelcomeScreen from '../pages/WelcomeScreen';
 
 export default function Routes() {
@@ -26,6 +26,11 @@ export default function Routes() {
         <Screen 
           name="Login" 
           component={Login}
+        />
+
+        <Screen 
+          name="Signup" 
+          component={Signup}
         />
 
         <Screen 

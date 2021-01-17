@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 export default function Signup() {
     return (
       <ScrollView style={styles.container}>
-        <ImageBackground source={require('./assets/signup.png')} style={styles.imgBackground}>
+        <ImageBackground source={require('../assets/signup.png')} style={styles.imgBackground}>
           <View style={styles.containerMain}>
             <View style={styles.rect}>
               <View style={styles.titleContainer}>
