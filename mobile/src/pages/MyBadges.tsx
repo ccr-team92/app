@@ -1,15 +1,15 @@
 import React from 'react';
 import { ScrollView, View, StyleSheet, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { AntDesign } from '@expo/vector-icons'; 
+import { AntDesign } from '@expo/vector-icons';
 
 
 export default function MyBadges() {
     return (
         <View style={styles.container}>
-            <LinearGradient start={{x: 0, y: 0}} end={{x: 0, y: 1}} colors={['rgba(248,189,9,1)', 'rgba(255,132,64,1)', 'rgba(254,18,67,1)']} style={styles.background}></LinearGradient>
+            <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }} colors={['rgba(248,189,9,1)', 'rgba(255,132,64,1)', 'rgba(254,18,67,1)']} style={styles.background}></LinearGradient>
             <View style={styles.rect}>
-                <LinearGradient start={{x: 0.1, y: 0.9}} end={{x: 0.9, y: 0}} colors={['rgba(255,255,255,0.6)', 'rgba(255,255,255,0.0)']} style={styles.backgroundCard}></LinearGradient>
+                <LinearGradient start={{ x: 0.1, y: 0.9 }} end={{ x: 0.9, y: 0 }} colors={['rgba(255,255,255,0.6)', 'rgba(255,255,255,0.0)']} style={styles.backgroundCard}></LinearGradient>
                 <View style={styles.containerImage}>
                     <Image style={styles.imageProfile} source={require('../assets/avatar.png')} />
                 </View>
@@ -36,80 +36,66 @@ export default function MyBadges() {
                     </View>
                 </View>
                 <Text style={styles.titleBold}>SUAS CONQUISTAS</Text>
-                <Image source={require('../assets/medals.png')} style={{width: 131, height:30, marginTop: 5}}/> 
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/forca.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>Força, foco e fé</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO DEFINA SEUS OBJETIVOS</Text>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/agoravai.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>#agoravai</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO DEFINA SEUS OBJETIVOS</Text>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/resiliencia.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>Resiliência é uma dádiva!</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO DESENVOLVA SUAS SOFT SKILLS</Text>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/flexivel.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>Mais flexível que grafeno!</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO DESENVOLVA SUAS SOFT SKILLS</Text>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/ted.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>Quase um TedTalker!</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO PREPARE-SE PARA FALAR EM PÚBLICO</Text>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/felipe.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>Felipe Neto que se cuide!</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO PREPARE-SE PARA FALAR EM PÚBLICO</Text>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/julius.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>Julius ficaria orgulhoso!</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO PLANEJE SUAS FINANÇAS</Text>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Image source={require('../assets/nath.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleContent}>Discípulo da Nath Finanças</Text>
-                    <Text style={styles.subTitleContent}>NO CURSO PLANEJE SUAS FINANÇAS</Text>
-                  </View>
-                </View>
-                <Image source={require('../assets/points2.png')} style={{width: 149, height:30, marginTop: 5, marginBottom: 10}}/> 
-                <Text style={styles.subTitleRanking}>1856 PONTOS   |    1º LUGAR NO RANKING GERAL </Text>
-                <Text style={styles.subTitleRanking}>Confira o desempenho dos jogadores </Text>
-                <View style={styles.headerRanking}>
-                  <Image source={require('../assets/avatar.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleRanking}>JULIANA ALMEIDA</Text>
-                    <Text style={styles.subTitleRanking}>1º lugar | 1856 pontos</Text>
-                  </View>
-                </View>
-                <View style={styles.headerRanking}>
-                  <Image source={require('../assets/avatar2.png')} style={{width: 74, height:74}}/> 
-                  <View>
-                    <Text style={styles.titleRanking}>PEDRO SOUZA</Text>
-                    <Text style={styles.subTitleRanking}>2º lugar | 1844 pontos</Text>
-                  </View>
-                </View>
+                <Image source={require('../assets/medals.png')} style={{ width: 131, height: 30, marginTop: 5 }} />
+                <ScrollView style={styles.scrollContainer} showsHorizontalScrollIndicator={false}>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/forca.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>Força, foco e fé</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO DEFINA SEUS OBJETIVOS</Text>
+                        </View>
+                    </View>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/agoravai.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>#agoravai</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO DEFINA SEUS OBJETIVOS</Text>
+                        </View>
+                    </View>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/resiliencia.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>Resiliência é uma dádiva!</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO DESENVOLVA SUAS SOFT SKILLS</Text>
+                        </View>
+                    </View>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/flexivel.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>Mais flexível que grafeno!</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO DESENVOLVA SUAS SOFT SKILLS</Text>
+                        </View>
+                    </View>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/ted.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>Quase um TedTalker!</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO PREPARE-SE PARA FALAR EM PÚBLICO</Text>
+                        </View>
+                    </View>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/felipe.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>Felipe Neto que se cuide!</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO PREPARE-SE PARA FALAR EM PÚBLICO</Text>
+                        </View>
+                    </View>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/julius.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>Julius ficaria orgulhoso!</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO PLANEJE SUAS FINANÇAS</Text>
+                        </View>
+                    </View>
+                    <View style={styles.headerContent}>
+                        <Image source={require('../assets/nath.png')} style={{ width: 74, height: 74 }} />
+                        <View>
+                            <Text style={styles.titleContent}>Discípulo da Nath Finanças</Text>
+                            <Text style={styles.subTitleContent}>NO CURSO PLANEJE SUAS FINANÇAS</Text>
+                        </View>
+                    </View>
+                </ScrollView>
+
             </View>
         </View>
     )
@@ -137,7 +123,8 @@ const styles = StyleSheet.create({
     },
     rect: {
         position: 'absolute',
-        height: 1300,
+        display: 'flex',
+        height: Dimensions.get('window').height - 100,
         top: 100,
         bottom: 0,
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -271,60 +258,64 @@ const styles = StyleSheet.create({
         borderTopColor: '#fff',
         borderTopWidth: 1,
     },
+    scrollContainer: {
+        marginLeft: -30,
+        marginTop: 10,
+        paddingVertical: 10
+    },
     headerContent: {
-      width:307,
-      height: 62,
-      alignItems: 'center',
-      marginTop: 10, 
-      marginBottom: 10,
-      flexDirection: 'row',
-      backgroundColor: 'rgba(253,82,66,0.61)',
-      borderRadius: 36,
-      marginLeft: -30
+        width: 317,
+        height: 62,
+        alignItems: 'center',
+        marginTop: 10,
+        marginBottom: 10,
+        flexDirection: 'row',
+        backgroundColor: 'rgba(253,82,66,0.61)',
+        borderRadius: 36,
     },
     headerPoints: {
-      width:314,
-      height: 131,
-      alignItems: 'center',
-      marginBottom: 10,
-      borderRadius: 20,
-      marginTop: 50
+        width: 314,
+        height: 131,
+        alignItems: 'center',
+        marginBottom: 10,
+        borderRadius: 20,
+        marginTop: 50
     },
     titleContent: {
-      color: '#FFF',
-      fontSize: 20, 
-      textAlign: 'left',
-      marginLeft: 10,
-      fontFamily: 'Dosis_700Bold',
+        color: '#FFF',
+        fontSize: 20,
+        textAlign: 'left',
+        marginLeft: 10,
+        fontFamily: 'Dosis_700Bold',
     },
     subTitleContent: {
-      color: '#FFF',
-      fontSize: 10, 
-      textAlign: 'left',
-      marginLeft: 10,
-      fontFamily: 'Dosis_400Regular',
+        color: '#FFF',
+        fontSize: 10,
+        textAlign: 'left',
+        marginLeft: 10,
+        fontFamily: 'Dosis_400Regular',
     },
     headerRanking: {
-      width:307,
-      height: 62,
-      alignItems: 'center',
-      marginTop: 10, 
-      marginBottom: 10,
-      marginLeft: 15,
-      flexDirection: 'row',
+        width: 307,
+        height: 62,
+        alignItems: 'center',
+        marginTop: 10,
+        marginBottom: 10,
+        marginLeft: 15,
+        flexDirection: 'row',
     },
     titleRanking: {
-      color: '#FC1243',
-      fontSize: 17, 
-      textAlign: 'center',
-      marginLeft: 10,
-      fontFamily: 'Dosis_800ExtraBold',
+        color: '#FC1243',
+        fontSize: 17,
+        textAlign: 'center',
+        marginLeft: 10,
+        fontFamily: 'Dosis_800ExtraBold',
     },
     subTitleRanking: {
-      color: '#878684',
-      fontSize: 16, 
-      textAlign: 'left',
-      marginLeft: 10,
-      fontFamily: 'Dosis_400Regular',
+        color: '#878684',
+        fontSize: 16,
+        textAlign: 'left',
+        marginLeft: 10,
+        fontFamily: 'Dosis_400Regular',
     },
 })
