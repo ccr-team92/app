@@ -1,23 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import AppLoading from 'expo-app-loading';
-import { useFonts, Dosis_700Bold, Dosis_800ExtraBold, Dosis_400Regular } from '@expo-google-fonts/dosis';
 
-const image = {uri:'https://i.imgur.com/UGpGAkN.png'}
 
-export default function Login() {
-  let [fontsLoaded] = useFonts({
-    Dosis_700Bold,
-    Dosis_800ExtraBold,
-    Dosis_400Regular
-  });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
+export default function Home() {
     return (
-      <ImageBackground source={image} style={styles.imgBackground}>
+      <ImageBackground source={require('../assets/home.png')} style={styles.imgBackground}>
         <View style={styles.container}>
           <LinearGradient colors={['rgba(248,189,9,0.3)', 'rgba(255,132,65,0.3', 'rgba(254,18,67,0.3)']} style={styles.background}></LinearGradient>
           <Image style={styles.imageTrophy} source={require('../assets/trophy10.png')} />

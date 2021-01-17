@@ -1,19 +1,7 @@
 import React from 'react';
 import {ScrollView, View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import AppLoading from 'expo-app-loading';
-import { useFonts, Dosis_700Bold, Dosis_800ExtraBold, Dosis_400Regular } from '@expo-google-fonts/dosis';
 
-export default function Login() {
-  let [fontsLoaded] = useFonts({
-    Dosis_700Bold,
-    Dosis_800ExtraBold,
-    Dosis_400Regular
-  });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
+export default function Course() {
     return (
       <ScrollView style={styles.container}>
         <ImageBackground source={require('./assets/bgCurso.png')} style={styles.header}>
@@ -21,8 +9,10 @@ export default function Login() {
         </ImageBackground>
         <View style={styles.containerFix}>
           <View style={styles.containerMain}>
-            <Image source={require('./assets/progressBar.png')} style={{width: 314, height:14, marginTop: 10}}/>
-            <Image source={require('./assets/courseStats.png')} style={{width: 145, height:13, marginTop: 10}}/>
+            <TouchableOpacity>
+              <Image source={require('./assets/progressBar.png')} style={{width: 314, height:14, marginTop: 10}}/>
+              <Image source={require('./assets/courseStats.png')} style={{width: 145, height:13, marginTop: 10}}/>
+            </TouchableOpacity>
             <View style={styles.line}></View>
             <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</Text>
             <ImageBackground source={require('./assets/rectCourseContent.png')} style={styles.headerContent}>
