@@ -14,7 +14,7 @@ export default function Welcome() {
         <ImageBackground source={require('../assets/welcome.png')} style={styles.imgBackground}>
             <View style={styles.container}>
                 <View style={styles.rect}>
-                    <Image style={styles.image} source={{ uri: 'https://fmnova.com.br/images/noticias/safe_image.jpg' }} />
+                    <Image style={styles.image} source={require('../assets/logo.svg')} />
                     <Text style={styles.title}>Bem-vindo, estudante!</Text>
                     <TouchableOpacity style={styles.button} onPress={() => handleNavigation('Login')}>
                         <Text style={styles.buttonText}>COMECE SUA JORNADA</Text>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
     },
     rect: {
-        backgroundColor: 'rgba(255, 255, 255, 0.60)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         width: 350,
         height: 540,
         flexWrap: 'wrap',
@@ -67,6 +67,14 @@ const styles = StyleSheet.create({
         height: 72,
         justifyContent: 'center',
         alignItems: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     buttonText: {
         color: '#fff',
@@ -74,7 +82,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Dosis_800ExtraBold'
     },
     image: {
-        width: 147,
-        height: 147
+        width: 216,
+        height: 92.35
     }
 })

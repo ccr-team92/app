@@ -1,10 +1,15 @@
 import React from 'react';
 import { ScrollView, View, StyleSheet, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { AntDesign } from '@expo/vector-icons';
-
+import { AntDesign } from '@expo/vector-icons'; 
+import { useNavigation } from "@react-navigation/native";
 
 export default function MyBadges() {
+    const navigation = useNavigation();
+
+    function handleNavigation(route: string) {
+        navigation.navigate(route);
+    }
     return (
         <View style={styles.container}>
             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }} colors={['rgba(248,189,9,1)', 'rgba(255,132,64,1)', 'rgba(254,18,67,1)']} style={styles.background}></LinearGradient>
@@ -15,7 +20,7 @@ export default function MyBadges() {
                 </View>
                 <View style={styles.containerProfile}>
                     <Text style={styles.title}></Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleNavigation('Profile')}>
                         <AntDesign name="closecircle" size={30} color="white" />
                     </TouchableOpacity>
                 </View>

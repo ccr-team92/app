@@ -65,6 +65,18 @@ export default function Signup() {
               <Text style={styles.titleFill}>DADOS PESSOAIS</Text>
               <TextInput style={styles.textInput} placeholder={"DATA DE NASCIMENTO"} value={form.date_of_birth} onChangeText={handleForm('date_of_birth')} />
               <TextInput style={styles.textInput} placeholder={"CIDADE"} value={form.city} onChangeText={handleForm('city')} />
+              <View style={styles.interestsContainer}>
+                <TouchableOpacity style= {styles.interest}>COMPUTAÇÃO</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>CINEMA</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>NATUREZA</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>LIVROS</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>JOGOS</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>MÚSICA</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>ARTE</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>PESSOAS</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>FINANÇAS</TouchableOpacity>
+                <TouchableOpacity style= {styles.interest}>EMPREENDEDORISMO</TouchableOpacity>
+              </View>
               <TouchableOpacity onPress={() => handleNavigation('Login')} style={styles.button}>
                 <Text style={styles.buttonText}>CADASTRAR</Text>
               </TouchableOpacity>
@@ -134,6 +146,22 @@ const styles = StyleSheet.create({
       padding: 20,
       marginTop: 10,
       color: "#CD4F0C"
+    },
+    interestsContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      flexWrap: 'wrap',
+      width:'100%', 
+      marginTop: 10
+    },
+    interest: {
+      padding:10,
+      borderRadius: 50,
+      color: '#fff',
+      backgroundColor: '#F9B610',
+      fontFamily: 'Dosis_400Regular',
+      fontSize: 14,
+      margin:1
     },
     button: {
       backgroundColor: '#FE1243',

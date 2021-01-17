@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Dimensions, ImageBackground, TextInput } from 'react-native';
+import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions, ImageBackground, TextInput } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import api from '../services/api';
 
 export default function Login() {
 
-    const [user, setUser] = useState('anibalsolon');
+    const [user, setUser] = useState('julianaalmeida');
     const [password, setPassword] = useState('123412341');
     const [signingIn, setSigningIn] = useState(false);
     const [failure, setFailure] = useState(false);
@@ -37,6 +37,7 @@ export default function Login() {
     return (
         <ImageBackground source={require('../assets/login.png')} style={styles.imgBackground}>
             <View style={styles.container}>
+                <Image style={styles.image} source={require('../assets/logo.svg')} />
                 <View style={styles.rect}>
                     <Text style={styles.title}>FAÇA SEU LOGIN</Text>
                     <TextInput style={styles.textInput} value={user} onChangeText={setUser} />
@@ -47,7 +48,7 @@ export default function Login() {
                     </TouchableOpacity>
                 </View>
                 <Text style={styles.text}>É a sua primeira vez aqui?</Text>
-                <TouchableOpacity style={styles.buttonSubscribe}  onPress={() => handleNavigation('Signup')}>
+                <TouchableOpacity style={styles.buttonSubscribe}  onPress={login}>
                     <Text style={styles.buttonText}>CADASTRE-SE</Text>
                 </TouchableOpacity>
             </View>
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height
     },
     rect: {
-        backgroundColor: 'rgba(255, 255, 255, 0.60)',
+        backgroundColor: 'rgba(255, 255, 255, 0.40)',
         width: 374,
         height: 370,
         flexWrap: 'wrap',
@@ -123,6 +124,14 @@ const styles = StyleSheet.create({
         height: 72,
         justifyContent: 'center',
         alignItems: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     buttonDisabled: {
         backgroundColor: '#DDD',
@@ -135,10 +144,23 @@ const styles = StyleSheet.create({
         height: 72,
         justifyContent: 'center',
         alignItems: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     buttonText: {
         color: '#fff',
         fontSize: 20,
         fontFamily: 'Dosis_800ExtraBold'
+    },
+    image: {
+        width: 216,
+        height: 92.35,
+        marginBottom: 20
     }
 })
