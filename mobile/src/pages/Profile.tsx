@@ -20,7 +20,7 @@ export default function Profile() {
                 </View>
                 <View style={styles.containerProfile}>
                     <Text style={styles.title}>PERFIL</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleNavigation('CourseList')}>
                         <AntDesign name="closecircle" size={30} color="white" />
                     </TouchableOpacity>
                 </View>
@@ -53,7 +53,7 @@ export default function Profile() {
                     <TouchableOpacity>
                         <Text style={styles.textMenu}>certificados</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleNavigation('MyBadges')}>
                         <Text style={styles.textMenu}>conquistas</Text>
                     </TouchableOpacity>
                     <TouchableOpacity>
@@ -67,6 +67,9 @@ export default function Profile() {
                     </TouchableOpacity>
                     <TouchableOpacity>
                         <Text style={styles.textMenu}>crie seu curso</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleNavigation('Login')}>
+                        <Text style={styles.textMenu}>sair</Text>
                     </TouchableOpacity>
                 </View>
             </View>
