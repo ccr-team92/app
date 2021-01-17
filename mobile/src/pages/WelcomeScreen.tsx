@@ -18,7 +18,7 @@ export default function WelcomeScreen() {
                     <Text style={styles.title}>Bem-vindo, estudante!</Text>
                     <TouchableOpacity style={styles.button} onPress={handleNavigateToLogin}>
                         <Text style={styles.buttonText}>COMECE SUA JORNADA</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> 
                 </View>
             </View>
         </ImageBackground>
