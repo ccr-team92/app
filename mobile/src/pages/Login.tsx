@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Dimensions, ImageBackground, TextInput } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import api from '../services/api';
@@ -11,6 +11,10 @@ export default function Login() {
     const [failure, setFailure] = useState(false);
 
     const navigation = useNavigation();
+
+    function handleSignup() {
+        navigation.navigate("Signup");
+    }
 
     async function login() {
         if (signingIn) {
@@ -43,7 +47,7 @@ export default function Login() {
                     </TouchableOpacity>
                 </View>
                 <Text style={styles.text}>É a sua primeira vez aqui?</Text>
-                <TouchableOpacity style={styles.buttonSubscribe}>
+                <TouchableOpacity style={styles.buttonSubscribe} onPress={handleSignup}>
                     <Text style={styles.buttonText}>CADASTRE-SE</Text>
                 </TouchableOpacity>
             </View>

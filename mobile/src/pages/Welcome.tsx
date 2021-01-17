@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackground } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 
-export default function WelcomeScreen() {
+export default function Welcome() {
 
     const navigation = useNavigation();
 
