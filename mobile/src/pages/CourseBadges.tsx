@@ -15,7 +15,7 @@ export default function CourseBadges() {
         </ImageBackground>
         <View style={styles.containerFix}>
           <View style={styles.containerMain}>
-            <Image source={require('../assets/progressBar100.png')} style={{width: 309, height:10, marginTop: 10}}/>
+            <Image source={require('../assets/ProgressBar100.png')} style={{width: 309, height:10, marginTop: 10}}/>
             <View style={styles.medalsContainer}>
               <Image source={require('../assets/trophyColor.png')} style={{width: 27, height:22, marginRight:5,}}/> 
               <Text style={styles.medals}>2 CONQUISTAS</Text>
