@@ -17,7 +17,7 @@ export default function Welcome() {
                     <Image style={styles.image} source={require('../assets/logo.svg')} />
                     <Text style={styles.title}>Bem-vindo, estudante!</Text>
                     <TouchableOpacity style={styles.button} onPress={() => handleNavigation('Login')}>
-                        <Text style={styles.buttonText}>COMECE SUA JORNADA</Text>
+                        <Text style={styles.buttonText}>COMECE SEU CAMINHO</Text>
                     </TouchableOpacity> 
                 </View>
             </View>
