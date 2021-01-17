@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions, ImageBackg
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign } from '@expo/vector-icons';
 
-export default function Login() {
+export default function Profile() {
     return (
         <View style={styles.container}>
             <LinearGradient start={{x: 0, y: 0}} end={{x: 0, y: 1}} colors={['rgba(248,189,9,1)', 'rgba(255,132,64,1)', 'rgba(254,18,67,1)']} style={styles.background}></LinearGradient>
