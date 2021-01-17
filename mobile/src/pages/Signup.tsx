@@ -77,7 +77,7 @@ export default function Signup() {
                 <TouchableOpacity style= {styles.interest}>FINANÇAS</TouchableOpacity>
                 <TouchableOpacity style= {styles.interest}>EMPREENDEDORISMO</TouchableOpacity>
               </View>
-              <TouchableOpacity onPress={() => handleNavigation('Login')} style={styles.button}>
+              <TouchableOpacity onPress={login} style={styles.button}>
                 <Text style={styles.buttonText}>CADASTRAR</Text>
               </TouchableOpacity>
             </View>
