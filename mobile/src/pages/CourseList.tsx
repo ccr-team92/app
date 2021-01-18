@@ -64,25 +64,25 @@ export default function CourseList() {
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/empreenda.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Empreenda</Text>
-                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/amadureca.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Amadureça sua inteligência emocional</Text>
-                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/planeje.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Planeje suas finanças</Text>
-                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/programar.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Aprenda a programar</Text>
-                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                     </>
@@ -97,19 +97,19 @@ export default function CourseList() {
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/envolvase.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Envolva-se</Text>
-                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/exerca.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Exerça sua cidadania</Text>
-                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <ImageBackground source={require('../assets/diversifique.png')} style={styles.bgCurso}>
                                 <Text style={styles.titleCourse}>Diversifique e inclua</Text>
-                                <Image source={require('../assets/Padlock.png')} style={styles.iconLock} />
+                                <Image source={require('../assets/padlock.png')} style={styles.iconLock} />
                             </ImageBackground>
                         </TouchableOpacity>
                     </>
